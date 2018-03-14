@@ -162,7 +162,7 @@ Please see [Add-On Features](#add-on-features).
 
 ##### compiler
 
-Type: `webpack`  
+Type: `webpack`
 Default: `null`
 
 An instance of a `webpack` compiler. A passed compiler's config will take
@@ -174,7 +174,7 @@ a valid webpack config property._
 
 ##### config
 
-Type: `Object`  
+Type: `Object`
 Default: `{}`
 
 An object containing the configuration for creating a new `webpack` compiler
@@ -182,7 +182,7 @@ instance.
 
 ##### content
 
-Type: `String|[String]`  
+Type: `String|[String]`
 Default: `[]`
 
 The path, or array of paths, from which content will be served.
@@ -190,7 +190,7 @@ The path, or array of paths, from which content will be served.
 <!-- intentionally out of alphabetic order -->
 ##### clipboard
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `true`
 
 If true, the server will copy the server URI to the clipboard when the server is
@@ -198,14 +198,14 @@ started.
 
 ##### dev
 
-Type: `Object`  
+Type: `Object`
 Default: `{ publicPath: '/' }`
 
 An object containing options for [webpack-dev-middleware][dev-ware].
 
 ##### host
 
-Type: `Object`  
+Type: `Object`
 Default: `'localhost'`
 
 Sets the host that the `WebSocket` server will listen on. If this doesn't match
@@ -214,10 +214,10 @@ properly.
 
 ##### hot
 
-Type: `Object|Booelean`  
+Type: `Object|Booelean`
 Default: `{}`
 
-An object containing options for [webpack-hot-client][hot-client].  
+An object containing options for [webpack-hot-client][hot-client].
 
 As of `v0.2.1` setting this to `false` will completely disable `webpack-hot-client`
 and all automatic Hot Module Replacement functionality. This is akin to the
@@ -225,7 +225,7 @@ and all automatic Hot Module Replacement functionality. This is akin to the
 
 ##### http2
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `false`
 
 If using Node v9 or greater, setting this option to `true` will enable HTTP2
@@ -233,7 +233,7 @@ support.
 
 ##### https
 
-Type: `Object`  
+Type: `Object`
 Default: `null`
 
 Passing this option will instruct `webpack-serve` to create and serve the webpack
@@ -253,7 +253,7 @@ See the [Node documentation][https-opts] for more information.
 
 ##### logLevel
 
-Type: `String`  
+Type: `String`
 Default: `info`
 
 Instructs `webpack-serve` to output information to the console/terminal at levels
@@ -271,7 +271,7 @@ higher than the specified level. Valid levels:
 
 ##### logTime
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `false`
 
 Instruct `webpack-serve` to prepend each line of log output with a `[HH:mm:ss]`
@@ -279,7 +279,7 @@ timestamp.
 
 ##### on
 
-Type: `Object`  
+Type: `Object`
 Default: `null`
 
 While running `webpack-serve` from the command line, it can sometimes be useful
@@ -295,7 +295,7 @@ on: {
 
 ##### open
 
-Type: `Boolean|Object`  
+Type: `Boolean|Object`
 Default: `false`
 
 Instruct the module to open the served bundle in a browser. Accepts an `Object`
@@ -312,7 +312,7 @@ _Note: Using the `open` option will disable the `clipboard` option._
 
 ##### port
 
-Type: `Number`  
+Type: `Number`
 Default: `8080`
 
 The port the server should listen on.
@@ -374,7 +374,6 @@ add: (app, middleware, options) => {
   middleware.webpack();
   middleware.content();
 
-  // router *must* be the last middleware added
   app.use(router.routes());
 }
 ```

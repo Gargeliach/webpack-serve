@@ -33,7 +33,6 @@ module.exports.serve = {
     middleware.webpack();
     middleware.content();
 
-    // router *must* be the last middleware added
     app.use(router.routes());
   }
 };
